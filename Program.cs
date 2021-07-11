@@ -13,31 +13,48 @@ namespace csharpclass
         // Challenge 1: Say hello! Generate a message to send to this student, include their name, and return the message!
         private static string SayHello(Student student)
         {
-            return "hello doggy";
+            return "Hello " + student.Name;
         }
 
         // Challenge 2: Say hello to everyone! Do what you did in challenge 1, but do it for the entire class!
         private static string SayHello(List<Student> students)
         {
-            return "hello doggies";
+            var message = "";
+
+            foreach (var student in students)
+            {
+                message += SayHello(student);
+            }
+
+            return message;
         }
 
         // Challenge 3: Are you in my group? Return true if the student is in the selected group, false if they are not.
         private static bool IsInGroup(Student student, string groupName)
         {
-            return false;
+            return student.GroupName == groupName;
         }
 
         // Challenge 4: Create and add a new student! Use console inputs to define and create a new student object, then add that object to the existing students list.
         // Extra credit: Reject the student if they do not belong to one of the existing student groups.
         private static List<Student> AddNewStudent(string studentName, string studentEmail, string studentGroup, List<Student> existingStudents)
         {
+            existingStudents.Add(new Student() {Name = studentName, EmailAddress = studentEmail, GroupName = studentGroup});
             return existingStudents;
         }
 
         // Challenge 5: Expel a student from the class! Find the student by name, and kick them out of the class, by removing them from the student list!
         private static List<Student> ExpelStudent(string studentNameToExpel, List<Student> students)
         {
+            for(var i = 0; i < students.Count; i++)
+            {
+                var student = students[i];
+                if (student.Name == studentNameToExpel)
+                {
+                    students.RemoveAt(i);
+                }
+            }
+
             return students;
         }
 

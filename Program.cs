@@ -17,7 +17,7 @@ namespace csharpclass
         }
 
         // Challenge 2: Say hello to everyone! Do what you did in challenge 1, but do it for the entire class!
-        private static string SayHello(List<Student> student)
+        private static string SayHello(List<Student> students)
         {
             return "hello doggies";
         }

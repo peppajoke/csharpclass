@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Text;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -61,7 +62,15 @@ namespace csharpclass
         // Challenge 6: Get the longest name in the class! Find the student who has the most letters or characters in their name, and return them in this method!
         private static Student GetLongestNamedStudent(List<Student> students)
         {
-            return students[0];
+            var longestNamedStudent = students[0];
+            foreach (var student in students)
+            {
+                if (student.Name.Length > longestNamedStudent.Name.Length)
+                {
+                    longestNamedStudent = student;
+                }
+            }
+            return longestNamedStudent;
         }
 
         // Challenge 7: Automatically generate a username for a student!
@@ -69,19 +78,39 @@ namespace csharpclass
         // To make this simple, you can assume all student names are only letters, spaces, and sometimes dashes.
         private static string GenerateUsername(Student student)
         {
-            return "";
+            // grab the first name
+            var name = student.Name.Replace("-", "");
+            var namePieces = name.Split(" ");
+            var firstName = namePieces[0];
+
+            var username = firstName.Substring(0, 1);
+
+            var firstNameCharacterCount = firstName.Length;
+
+            var remainderName = name.Substring(firstNameCharacterCount).Replace(" ", "");
+
+            return (username + remainderName).ToLower();
         }
 
         // Challenge 8: Populate usernames! Reuse your method above to populate the Username field on all the student objects!
         private static List<Student> PopulateUsernames(List<Student> students)
         {
+            foreach (var student in students)
+            {
+                student.Username = GenerateUsername(student);
+            }
             return students;
         }
 
         // Challenge 9: Generate an anagram of the student's name, and return it. Reverse all the letters! Don't change character casing
         private static string GenerateAnagramOfName(Student student)
         {
-            return "sdrawkcaB";
+            var builder = new StringBuilder();
+            foreach (var character in student.Name)
+            {
+                builder.Insert(0, character);
+            }
+            return builder.ToString();
         }
 
         // An in-memory database of students in this class
@@ -148,6 +177,7 @@ namespace csharpclass
             {
                 if (UsernamesByStudentName[student.Name] != student.Username)
                 {
+                    Console.WriteLine(student.Username);
                     challenge8 = false;
                 }
             }

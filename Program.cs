@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace csharpclass
 {
-    class Program
+    public class Program
     {
         // STEP 1: The following methods are incorrect! Read what they are supposed to do, and write them correctly. Inputs and outputs should be good as-is.
         // You can run this program, and the console output will let you know how well you did!
@@ -95,7 +95,7 @@ namespace csharpclass
         }
 
         // This method tests all of the challenges above, and lets you know how you did!
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var students = LoadStudentDatabase();
 

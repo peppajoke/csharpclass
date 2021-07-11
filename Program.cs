@@ -6,20 +6,20 @@ namespace csharpclass
 {
     public class Program
     {
-        // STEP 1: The following methods are incorrect! Read what they are supposed to do, and write them correctly. Inputs and outputs should be good as-is.
+        // The following methods are incorrect! Read what they are supposed to do, and write them correctly. Inputs and outputs should be good as-is.
         // You can run this program, and the console output will let you know how well you did!
         // For the purposes of this exercise, please do not use LINQ, or any external C# libraries.
 
         // Challenge 1: Say hello! Generate a message to send to this student, include their name, and return the message!
         private static string SayHello(Student student)
         {
-            return "hello doggy";
+            return "hello doggy"; // <=================== Write your code inside this block (you can delete these comments)
         }
 
         // Challenge 2: Say hello to everyone! Do what you did in challenge 1, but do it for the entire class!
         private static string SayHello(List<Student> students)
         {
-            return "hello doggies";
+            return "hello doggies"; // <=================== Write your code inside this block
         }
 
         // Challenge 3: Are you in my group? Return true if the student is in the selected group, false if they are not.
@@ -32,19 +32,19 @@ namespace csharpclass
         // Extra credit: Reject the student if they do not belong to one of the existing student groups.
         private static List<Student> AddNewStudent(string studentName, string studentEmail, string studentGroup, List<Student> existingStudents)
         {
-            return existingStudents;
+            return existingStudents; // <=================== Write your code inside this block
         }
 
         // Challenge 5: Expel a student from the class! Find the student by name, and kick them out of the class, by removing them from the student list!
         private static List<Student> ExpelStudent(string studentNameToExpel, List<Student> students)
         {
-            return students;
+            return students; // <=================== Write your code inside this block
         }
 
         // Challenge 6: Get the longest name in the class! Find the student who has the most letters or characters in their name, and return them in this method!
         private static Student GetLongestNamedStudent(List<Student> students)
         {
-            return students[0];
+            return students[0]; // <=================== Write your code inside this block
         }
 
         // Challenge 7: Automatically generate a username for a student!
@@ -52,19 +52,19 @@ namespace csharpclass
         // To make this simple, you can assume all student names are only letters, spaces, and sometimes dashes.
         private static string GenerateUsername(Student student)
         {
-            return "";
+            return ""; // <=================== Write your code inside this block
         }
 
         // Challenge 8: Populate usernames! Reuse your method above to populate the Username field on all the student objects!
         private static List<Student> PopulateUsernames(List<Student> students)
         {
-            return students;
+            return students; // <=================== Write your code inside this block
         }
 
         // Challenge 9: Generate an anagram of the student's name, and return it. Reverse all the letters! Don't change character casing
         private static string GenerateAnagramOfName(Student student)
         {
-            return "sdrawkcaB";
+            return "sdrawkcaB"; // <=================== Write your code inside this block
         }
 
         // An in-memory database of students in this class

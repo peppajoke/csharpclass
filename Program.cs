@@ -49,6 +49,7 @@ namespace csharpclass
 
         // Challenge 7: Automatically generate a username for a student!
         // Username should be the first letter of their first name, and full last name. Only letters are allowed in usernames, and all usernames should be all lowercase.
+        // To make this simple, you can assume all student names are only letters, spaces, and sometimes dashes.
         private static string GenerateUsername(Student student)
         {
             return "";
@@ -164,7 +165,7 @@ namespace csharpclass
             { "Maxwell Madzar", "mmadzar" },
             { "Jamie Smith", "jsmith" },
             { "Alex Schneider", "aschneider" },
-            { "Dan Intriligator", "dintrilligator" },
+            { "Dan Intriligator", "dintriligator" },
             { "Alex Waldbaum", "awaldbaum" },
             { "Kyrie McCormick", "kmccormick" },
             { "Drew Angus", "dangus" },

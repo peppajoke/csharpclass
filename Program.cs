@@ -152,6 +152,13 @@ namespace csharpclass
             Console.WriteLine("Challenge 7: " + PassOrFail(challenge7));
             Console.WriteLine("Challenge 8: " + PassOrFail(challenge8));
             Console.WriteLine("Challenge 9: " + PassOrFail(challenge9));
+            
+            if (challenge1 && challenge2 && challenge3 && challenge4 && challenge5 && challenge6 && challenge7 && challenge8 && challenge9)
+            {
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                Console.WriteLine("YOU FREAKING DID IT! YOU SOLVED ALL OF THE CHALLENGES!!!");
+                Console.WriteLine("I'm really proud of you. Maybe you can try and help some of the other students in the class!");
+            }
         }
 
         private static Dictionary<string,string> UsernamesByStudentName = new Dictionary<string,string>() 

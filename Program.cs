@@ -173,7 +173,8 @@ namespace csharpclass
             { "Gitanjali Stevens", "gstevens" },
             { "Justin Sikora", "jsikora" },
             { "Jared Babinec", "jbabinec" },
-            { "Samantha Rowen", "srowen" }
+            { "Samantha Rowen", "srowen" },
+            { "Jack Bauerle", "jbauerle" }
         };
 
         private static string PassOrFail(bool result)

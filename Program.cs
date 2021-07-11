@@ -174,7 +174,8 @@ namespace csharpclass
             { "Justin Sikora", "jsikora" },
             { "Jared Babinec", "jbabinec" },
             { "Samantha Rowen", "srowen" },
-            { "Jack Bauerle", "jbauerle" }
+            { "Jack Bauerle", "jbauerle" },
+            { "John Jacob Jingleheimer-Schmitt", "jjacobjingleheimerschmitt" }
         };
 
         private static string PassOrFail(bool result)
